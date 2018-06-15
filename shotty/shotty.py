@@ -6,8 +6,8 @@ ec2 = session.resource('ec2')
 
 @click.command()
 def list_instances():
-	"List the EC2 instances"
-	for i in ec2.instances.all():
+	"List the number of EC2 instances"
+        for i in ec2.instances.all():
                 seperator=', '
                 print(seperator.join((
 			i.id,
